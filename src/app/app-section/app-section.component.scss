@@ -1,0 +1,237 @@
+a{
+    margin-right: 4rem;
+    text-decoration: none;
+    color: black;
+}
+.anchor{
+    float: right;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.btn{
+    color: #ffffff;
+    height: 2rem;
+}
+.trip{
+    margin-left: 13rem;
+    margin-bottom: 0;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+}
+.trip-img{
+    width: 450px; 
+    height: 600px;
+}
+
+.trip-content{
+    width: 50%;
+    margin: auto; 
+    margin-left: 10rem !important;  
+}
+.trip-header-text{
+    font-weight: bolder;
+    font-size: 2.6rem;
+    word-wrap: break-word;
+}
+.p-txt{width: 22rem;}
+.weather-header{
+    background-color: #133357;
+    color: #ffffff;
+}
+.canberra{
+    background-color: #0D7E88;
+    color: #ffffff;
+}
+.tokyo{
+    background-color: #D09378;
+    color: #ffffff;
+}
+.london{
+    background-color: #405B5D;
+    color: #ffffff;
+}
+.dubai{
+    background-color: #74A748;
+    color: #ffffff;
+}
+.align-mid{
+    text-align: center;
+}
+.icon{
+    width: 10%;
+    height: 10%;
+}
+h1{
+    margin-bottom: 0;
+}
+.temp{
+    font-size: 4rem;
+}
+#weather{
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.weather-row{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.f-dest{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    color: #133357;
+}
+.dest{
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.dest-img{
+    border-radius: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.des-row{
+    width: 100%;
+    overflow-x: auto !important;
+}
+
+.img-size{
+    width: 100%;
+    max-width: 166rem;
+    height: auto;
+}
+.promo-img{
+    display: grid !important;
+    grid-template-columns: 1fr;
+    // height: 33rem;
+}
+
+.promo-txt{
+    width: 50%;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bolder;
+    position: relative;
+    bottom: 10rem;
+    left: 8rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.promo-txt2{
+    width: 35%;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bolder;
+    position: relative;
+    bottom: 8rem;
+    left: 8rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.form-cls{
+    width:50%;
+}
+.quote{
+    margin-left: 30rem;
+    margin-right: 30rem;
+    opacity: 0.8;
+}
+.quote-text{
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color: #133357;
+}
+label{
+    font-weight: lighter;
+    font-size: 10px;
+    margin-top: 2rem;
+}
+input{
+    width: 25rem;
+}
+.submit-btn{
+    width: 5rem;
+    margin-left: 10rem;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+.success{
+    background-color: rgb(150, 207, 188);
+    margin-top: 2rem;
+}
+@media (max-width: 600px){
+    a{
+        margin-right: 0;
+        text-decoration: none;
+        color: black;
+    }
+    .anchor{
+        float: none;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .trip{
+        margin-left: 0;
+    margin-bottom: 0;
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
+    .p-txt{width: 22rem}
+    .trip-content{
+        width: 100%;
+        margin: 0; 
+        margin-left: 0 !important;  
+    }
+    .trip-header-text{
+        font-weight: bolder;
+        font-size: 2.6rem;
+        word-wrap: break-word;
+    }
+    .trip-img{
+        width: 400px; 
+        height: 600px;
+    }
+    #weather{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .weather-row{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+    }
+    .promo-img{
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
+    .promo-txt{
+        width: 50%;
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: bolder;
+        position: relative;
+        bottom: 10rem;
+        left: 8rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .promo-txt2{
+        width: 35%;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: bolder;
+        position: relative;
+        bottom: 8rem;
+        left: 8rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .quote{
+        margin-left: 0;
+        margin-right: 0;
+        opacity: 0.8;
+    }
+    input{
+        width: 20rem;
+    }
+
+}

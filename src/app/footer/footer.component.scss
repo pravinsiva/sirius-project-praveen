@@ -1,0 +1,28 @@
+.footer-text{
+    color: #ffffff;
+    margin-top: 3rem;
+}
+.footer{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.title{
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+.txt{
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media (max-width: 600px){
+    .footer{
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
+
+}

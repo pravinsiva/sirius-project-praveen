@@ -1,0 +1,118 @@
+<div>
+    <div class="anchor">
+        <a href="#weather">WEATHER</a>
+        <a href="#destinations">DESTINATIONS</a>
+        <a href="#getquote">GET A QUOTE</a>
+    </div>
+
+    <section id="plantrip">
+        <div class="trip row">
+            <img alt="plan a trip" src="assets/welcome-image.svg" class="trip-img" />
+            <div class="trip-content">
+                <p class="trip-header-text p-txt"><b>Life is short and the world is wide!</b></p>
+                <p class="p-txt">Stay at the comfort of your homes and book a trip to travel after the post pandemic
+                    era.</p>
+                <button  class="theme-bg btn">PLAN A TRIP</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="weather">
+        <div class="weather-header">
+            <h1><b>THE WEATHER CHANNEL</b></h1>
+        </div>
+        <div class="weather-row row" *ngIf="weather">
+            <div *ngFor="let item of weather">
+                <div [ngClass]="{'canberra': item.city==='Canberra', 'tokyo': item.city==='Tokyo', 
+                    'london': item.city==='London', 'dubai': item.city==='Dubai'}">
+                    <div class="align-mid">
+                        <p class="mr-0"><b>{{item.city}}</b></p>
+                        <img class="icon mr-0" src="assets/icon-party-sunny.svg">
+                        <p class="temp mr-0"><b>{{item.temp_Celsius}}&#8451;</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="destinations">
+        <div class="dest">
+            <p class="mr-0 mt-1 f-dest">Featured Destinations</p>
+            <div class="des-row row" *ngIf="dest">
+                <div *ngFor="let item of dest">
+                    <div class="col mr-1">
+                        <img class="dest-img" alt="Destination images" src="{{item.imageUrl}}" width="200"
+                            height="200" />
+                        <span>{{item.city}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="promo">
+        <div class="promo-img">
+            <img class="img-size" src="assets/promo-image.png" />
+            <div class="promo-txt">PLAN A TRIP</div>
+            <div class="promo-txt2">Make your vaccation the most memorable one</div>
+        </div>
+    </section>
+
+    <section id="getquote">
+        <div class="col quote">
+            <span class="quote-text">Travelling as a group? Get a Quote</span>
+            <div [formGroup]="form" class="col form-cls">
+                <div class="row">
+                    <div class="col">
+                        <label>Your Name</label>
+                        <input style="margin-right: 1rem;" id="name" formControlName="name" />
+                    </div>
+                    <div *ngIf="form.get('name').invalid && form.get('name').errors 
+                        && (form.get('name').dirty || form.get('name').touched)">
+                        <small class="text-danger" *ngIf="form.get('name').hasError('required')">
+                            Name is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label>Contact No</label>
+                        <input style="margin-right: 1rem;" id="contact" formControlName="contact" />
+                    </div>
+                    <div *ngIf="form.get('contact').invalid && form.get('contact').errors && 
+                    (form.get('contact').dirty || form.get('contact').touched)">
+                        <small class="text-danger" *ngIf="form.get('contact').hasError('required')">
+                            Contact is required.
+                        </small>
+                        <small class="text-danger" *ngIf="form.get('contact').hasError('maxlength')">
+                            Invalid Contact No.
+                        </small>
+                        <small class="text-danger" *ngIf="form.get('contact').hasError('minlength')">
+                            Invalid Contact No.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label>Email</label>
+                        <input style="margin-right: 1rem;" formControlName="email" />
+                    </div>
+                    <div *ngIf="form.get('email').invalid && form.get('email').errors && 
+                    (form.get('email').dirty || form.get('email').touched)">
+                        <small class="text-danger" *ngIf="form.get('email').hasError('required')">
+                            Email is required.
+                        </small>
+                        <small class="text-danger" *ngIf="form.get('email').hasError('email')">
+                            Invalid Email.
+                        </small>
+                    </div>
+                </div>
+                <input class="success" placeholder="We hear you! We will get back to you for planning your vaccation." *ngIf="showSuccess" disabled />
+                <button class="theme-bg btn submit-btn" (click)="onSubmit()" [disabled]="!form.valid" type="submit">SUBMIT</button>               
+            </div>
+        </div>
+    </section>
+</div>
