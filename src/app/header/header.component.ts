@@ -8,7 +8,7 @@ import { interval, Observable, Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
-  date = new Date('August 10, 2021 12:00:00');
+  date = new Date('August 08, 2021 18:00:00');
   counter$: Observable<number>;
   subscription: Subscription;
   timer: string
